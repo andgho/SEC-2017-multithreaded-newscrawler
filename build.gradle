@@ -1,0 +1,21 @@
+allprojects 
+{
+	apply plugin: 'java'
+}
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'NewsApp.NewsApp'
+}
+//dependencies{
+//    compile project(':Nytimes'),
+//            project(':Arstechnica'),
+//            project(':Bbc')
+//}
+
+jar 
+{
+    manifest 
+    {
+        attributes 'Main-Class': 'NewsApp.NewsApp'
+    }
+}
